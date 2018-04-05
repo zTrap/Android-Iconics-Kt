@@ -9,7 +9,7 @@ before_install:
 jdk:
     - oraclejdk8
 script:
-    - ./gradlew clean build test -x singingArchives
+    - ./gradlew assemble check
 notifications:
   email: false
 before_cache:
