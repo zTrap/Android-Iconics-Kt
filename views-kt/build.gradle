@@ -48,6 +48,7 @@ configurations {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.mikepenz:iconics-views:$iconics_version"
     implementation "com.mikepenz:iconics-core:$iconics_version"
     testImplementation 'junit:junit:4.12'
 

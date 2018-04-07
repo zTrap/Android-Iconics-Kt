@@ -14,4 +14,23 @@
  * limitations under the License.
  */
 
-include ':core-kt', ':views-kt'
+task ktlint(type: JavaExec, group: LifecycleBasePlugin.VERIFICATION_GROUP) {
+    inputs.dir('src')
+    outputs.dir('src')
+
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = 'com.github.shyiko.ktlint.Main'
+    args '--android', 'src/**/*.kt'
+}
+check.dependsOn ktlint
+
+task ktFormat(type: JavaExec, group: 'formatting') {
+    inputs.dir('src')
+    outputs.dir('src')
+
+    description = 'Fix Kotlin code style deviations.'
+    classpath = configurations.ktlint
+    main = 'com.github.shyiko.ktlint.Main'
+    args '--android', '-F', 'src/**/*.kt'
+}
