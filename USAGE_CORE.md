@@ -84,25 +84,6 @@ iconicsBuilder {
 
 java
 ```java
-new Iconics.IconicsBuilder().ctx(this)
-                .style(new ForegroundColorSpan(Color.WHITE), new BackgroundColorSpan(Color.BLACK), new RelativeSizeSpan(2f))
-                .styleFor(FontAwesome.Icon.faw_adjust, new BackgroundColorSpan(Color.RED))
-                .on(tv1)
-                .build();
-```
-kotlin
-```kotlin
-iconicsBuilder {
-    style(ForegroundColorSpan(Color.WHITE), BackgroundColorSpan(Color.BLACK), RelativeSizeSpan(2f))
-    styleFor(FontAwesome.Icon.faw_adjust, BackgroundColorSpan(Color.RED))
-    on(tv1)
-}
-```
-
----
-
-java
-```java
 String text = "Your awesome text for {faw-android}";
 Spannable decoratedText = new Iconics.IconicsBuilder().ctx(this)
                 .style(new ForegroundColorSpan(Color.WHITE), new BackgroundColorSpan(Color.BLACK), new RelativeSizeSpan(2f))
