@@ -57,14 +57,21 @@ fun LayoutInflater.setIconicsFactory(appCompatDelegate: AppCompatDelegate) {
 /**
  * Adaptation for [IconicsMenuInflaterUtil.inflate]
  * */
-fun MenuInflater.inflateWithIconics(context: Context, menuId: Int, menu: Menu, checkSubMenu: Boolean = false) {
+fun MenuInflater.inflateWithIconics(
+    context: Context,
+    menuId: Int,
+    menu: Menu,
+    checkSubMenu: Boolean = false
+) {
     IconicsMenuInflaterUtil.inflate(this, context, menuId, menu, checkSubMenu)
 }
 
 /**
  * Adaptation for [Iconics.IconicsBuilder] with auto-executing [Iconics.IconicsBuilderString.build]
  * */
-fun Context.iconicsBuilder(block: Iconics.IconicsBuilder.() -> Iconics.IconicsBuilderString): Spanned {
+fun Context.iconicsBuilder(
+    block: Iconics.IconicsBuilder.() -> Iconics.IconicsBuilderString
+): Spanned {
     val builder = Iconics.IconicsBuilder().ctx(this)
     return block(builder).build()
 }
@@ -81,7 +88,7 @@ fun Context.iconicsBuilder(block: Iconics.IconicsBuilder.() -> Iconics.IconicsBu
  * Adaptation for [IconicsArrayBuilder] with auto-executing [IconicsArrayBuilder.build]
  * */
 fun IconicsDrawable.createArray(
-        block: IconicsArrayBuilder.() -> IconicsArrayBuilder
+    block: IconicsArrayBuilder.() -> IconicsArrayBuilder
 ): Array<IconicsDrawable> {
     val builder = IconicsArrayBuilder(this)
     return block(builder).build()

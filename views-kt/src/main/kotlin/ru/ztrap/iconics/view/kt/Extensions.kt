@@ -40,7 +40,6 @@ fun IconicsCheckableTextView.startIcon(checked: Boolean, block: IconicsDrawable.
     }
 }
 
-
 /**
  * Safely update top [IconicsDrawable]
  * @param checked defines what the icon will be updated
@@ -59,7 +58,6 @@ fun IconicsCheckableTextView.topIcon(checked: Boolean, block: IconicsDrawable.()
     }
 }
 
-
 /**
  * Safely update end [IconicsDrawable]
  * @param checked defines what the icon will be updated
@@ -77,7 +75,6 @@ fun IconicsCheckableTextView.endIcon(checked: Boolean, block: IconicsDrawable.()
         endIcon(block)
     }
 }
-
 
 /**
  * Safely update bottom [IconicsDrawable]
