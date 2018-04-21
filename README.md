@@ -1,9 +1,11 @@
-# Android-Iconics Core Kt
+## Android-Iconics Core Kt
 Kotlin extensions for [Android-Iconics Library](https://github.com/mikepenz/Android-Iconics)
 
 core-kt: [ ![core](https://api.bintray.com/packages/ztrap/maven/core-kt/images/download.svg) ](https://bintray.com/ztrap/maven/core-kt/_latestVersion)
 
 views-kt: [ ![views](https://api.bintray.com/packages/ztrap/maven/views-kt/images/download.svg) ](https://bintray.com/ztrap/maven/views-kt/_latestVersion)
+
+---
 
 Install
 -------
