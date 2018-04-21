@@ -1,4 +1,4 @@
-## Android-Iconics Core Kt 
+## Android-Iconics Kotlin
 
 Kotlin extensions for [Android-Iconics Library](https://github.com/mikepenz/Android-Iconics)
 
