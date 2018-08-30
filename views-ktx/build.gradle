@@ -51,8 +51,9 @@ configurations {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$deps.legacy.appcompat"
-    implementation "com.mikepenz:iconics-core:$deps.legacy.iconics"
+    implementation "androidx.appcompat:appcompat:$deps.androidX.appcompat"
+    implementation "com.mikepenz:iconics-core:$deps.androidX.iconics"
+    implementation "com.mikepenz:iconics-views:$deps.androidX.iconics"
     testImplementation 'junit:junit:4.12'
 
     ktlint 'com.github.shyiko:ktlint:0.20.0'

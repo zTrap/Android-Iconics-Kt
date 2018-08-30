@@ -1,4 +1,4 @@
-# Usage of module core-kt
+# Usage of `core` modules
 
 java
 ```java
@@ -115,4 +115,22 @@ kotlin
 override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
     inflater.inflateWithIconics(getActivity(), R.menu.menu_fragment_main, menu)
 }
+```
+
+---
+
+java
+```java
+IconicsDrawable drawable = new IconicsDrawable(this)
+                                   .icon(FontAwesome.Icon.faw_android)
+                                   .sizeDp(24)
+                                   .toBitmap();
+Icon icon = Icon.createWithBitmap(drawable);
+```
+kotlin
+```kotlin
+val icon = IconicsDrawable(this)
+                .icon(FontAwesome.Icon.faw_android)
+                .sizeDp(24)
+                .toAndroidIcon()
 ```

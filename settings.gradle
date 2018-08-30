@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-include ':core-kt', ':views-kt'
+include ':core-kt', ':views-kt', ':core-ktx', ':views-ktx'

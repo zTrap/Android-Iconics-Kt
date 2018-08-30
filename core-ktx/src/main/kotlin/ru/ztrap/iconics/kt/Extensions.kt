@@ -23,14 +23,14 @@ import android.graphics.ColorFilter
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.os.Build
-import android.support.v4.graphics.drawable.IconCompat
-import android.support.v4.view.LayoutInflaterCompat
-import android.support.v7.app.AppCompatDelegate
 import android.text.Spanned
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.graphics.drawable.IconCompat
+import androidx.core.view.LayoutInflaterCompat
 import com.mikepenz.iconics.Iconics
 import com.mikepenz.iconics.IconicsArrayBuilder
 import com.mikepenz.iconics.IconicsDrawable
@@ -102,7 +102,7 @@ fun IconicsDrawable.createArray(
 }
 
 /**
- * Pretty converter to [android.support.v4.graphics.drawable.IconCompat]
+ * Pretty converter to [androidx.core.graphics.drawable.IconCompat]
  *
  * Note: use [IconCompat.toIcon] to transform into Platform's Icon
  * */
@@ -174,29 +174,6 @@ fun IconicsDrawable.color(colorProducer: () -> Int): IconicsDrawable {
 @JvmName("colorStateList")
 fun IconicsDrawable.color(colorListProducer: () -> ColorStateList): IconicsDrawable {
     return color(colorListProducer())
-}
-// endregion
-
-// region iconOffsetX
-/**
- * @see IconicsDrawable.iconOffsetXRes
- */
-fun IconicsDrawable.iconOffsetXRes(iconOffsetXResProducer: () -> Int): IconicsDrawable {
-    return iconOffsetXRes(iconOffsetXResProducer())
-}
-
-/**
- * @see IconicsDrawable.iconOffsetXRes
- */
-fun IconicsDrawable.iconOffsetXDp(iconOffsetXDpProducer: () -> Int): IconicsDrawable {
-    return iconOffsetXDp(iconOffsetXDpProducer())
-}
-
-/**
- * @see IconicsDrawable.iconOffsetXRes
- */
-fun IconicsDrawable.iconOffsetXPx(iconOffsetXPxProducer: () -> Int): IconicsDrawable {
-    return iconOffsetXPx(iconOffsetXPxProducer())
 }
 // endregion
 
@@ -351,7 +328,7 @@ fun IconicsDrawable.contourColor(contourColorProducer: () -> Int): IconicsDrawab
 }
 // endregion
 
-// region roundedCornersRx 
+// region roundedCornersRx
 /**
  * @see IconicsDrawable.roundedCornersRxRes
  */
@@ -374,7 +351,7 @@ fun IconicsDrawable.roundedCornersRxPx(roundedCornersRxPxProducer: () -> Int): I
 }
 // endregion
 
-// region roundedCornersRy 
+// region roundedCornersRy
 /**
  * @see IconicsDrawable.roundedCornersRyRes
  */
@@ -397,7 +374,7 @@ fun IconicsDrawable.roundedCornersRyPx(roundedCornersRyPxProducer: () -> Int): I
 }
 // endregion
 
-// region roundedCorners 
+// region roundedCorners
 /**
  * @see IconicsDrawable.roundedCornersRes
  */
@@ -420,7 +397,7 @@ fun IconicsDrawable.roundedCornersPx(roundedCornersPxProducer: () -> Int): Iconi
 }
 // endregion
 
-// region contourWidth 
+// region contourWidth
 /**
  * @see IconicsDrawable.contourWidthRes
  */
@@ -443,7 +420,7 @@ fun IconicsDrawable.contourWidthPx(contourWidthPxProducer: () -> Int): IconicsDr
 }
 // endregion
 
-// region backgroundContourWidth 
+// region backgroundContourWidth
 /**
  * @see IconicsDrawable.backgroundContourWidthRes
  */

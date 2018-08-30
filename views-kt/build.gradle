@@ -15,13 +15,17 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion setup.compileSdkVersion
+    buildToolsVersion setup.buildTools
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion setup.minSdkVersion
+        targetSdkVersion setup.targetSdkVersion
+        versionCode release.versionCode
+        versionName release.versionName
     }
 
     sourceSets {
@@ -46,10 +50,10 @@ configurations {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$support_version"
-    implementation "com.mikepenz:iconics-views:$iconics_version"
-    implementation "com.mikepenz:iconics-core:$iconics_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$deps.legacy.appcompat"
+    implementation "com.mikepenz:iconics-views:$deps.legacy.iconics"
+    implementation "com.mikepenz:iconics-core:$deps.legacy.iconics"
     testImplementation 'junit:junit:4.12'
 
     ktlint 'com.github.shyiko:ktlint:0.20.0'

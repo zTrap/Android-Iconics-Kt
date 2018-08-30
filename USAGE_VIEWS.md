@@ -1,4 +1,4 @@
-# Usage of module views-kt
+# Usage of `views` modules
 
 java
 ```java

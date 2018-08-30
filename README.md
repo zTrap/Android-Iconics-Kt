@@ -4,25 +4,37 @@ Kotlin extensions for [Android-Iconics Library](https://github.com/mikepenz/Andr
 
 [ ![core][core_svg] ][core_link] [ ![views][views_svg] ][views_link]
 
+[ ![core_x][core_x_svg] ][core_x_link] [ ![views_x][views_x_svg] ][views_x_link]
+
 [core_svg]: https://github-basic-badges.herokuapp.com/release/zTrap/Android-Iconics-Kt.svg?color=blue&text=core--kt
 [views_svg]: https://github-basic-badges.herokuapp.com/release/zTrap/Android-Iconics-Kt.svg?color=blue&text=views--kt
 [core_link]: https://bintray.com/ztrap/maven/core-kt/_latestVersion
 [views_link]: https://bintray.com/ztrap/maven/views-kt/_latestVersion
 
+[core_x_svg]: https://github-basic-badges.herokuapp.com/release/zTrap/Android-Iconics-Kt.svg?color=blue&text=core--ktx
+[views_x_svg]: https://github-basic-badges.herokuapp.com/release/zTrap/Android-Iconics-Kt.svg?color=blue&text=views--ktx
+[core_x_link]: https://bintray.com/ztrap/maven/core-ktx/_latestVersion
+[views_x_link]: https://bintray.com/ztrap/maven/views-ktx/_latestVersion
+
 Install
 -------
 
 ```groove
-implementation 'ru.ztrap.iconics:core-kt:1.0.1'
-implementation 'ru.ztrap.iconics:views-kt:1.0.1'
+// pure Appcompat
+implementation 'ru.ztrap.iconics:core-kt:<current version>'
+implementation 'ru.ztrap.iconics:views-kt:<current version>'
+
+// with AndroidX
+implementation 'ru.ztrap.iconics:core-ktx:<current version>'
+implementation 'ru.ztrap.iconics:views-ktx:<current version>'
 ```
 
 Usage
 -----
 
-[Module core-kt](USAGE_CORE.md)
+[Core modules](USAGE_CORE.md)
 
-[Module views-kt](USAGE_VIEWS.md)
+[Views modules](USAGE_VIEWS.md)
 
 How to Contribute
 -----------------

@@ -20,7 +20,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'org.jetbrains.dokka-android'
 
 group = GROUP
-version = VERSION_NAME
+version = rootProject.release.versionName
 
 dokka {
     outputFormat = 'javadoc'
@@ -94,6 +94,7 @@ bintray {
     configurations = ['archives']
 
     publish = true
+    override = true
 
     pkg {
         repo = REPO
@@ -101,7 +102,7 @@ bintray {
         vcsUrl = POM_VCS
 
         version {
-            name = VERSION_NAME
+            name = rootProject.release.versionName
 
             gpg {
                 sign = true
@@ -115,4 +116,14 @@ bintray {
             }
         }
     }
+}
+
+task cleanBuildInstall(type: GradleBuild) {
+    group = "publishing"
+    tasks = ['clean', 'build', 'install']
+}
+
+task cleanBuildPublish(type: GradleBuild) {
+    group = "publishing"
+    tasks = ['cleanBuildInstal', 'bintrayUpload']
 }
