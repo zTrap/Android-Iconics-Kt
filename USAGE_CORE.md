@@ -17,7 +17,7 @@ protected void onCreate(Bundle savedInstanceState) {
 kotlin
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle) {
-    getLayoutInflater().setIconicsFactory(getDelegate())
+    layoutInflater.setIconicsFactory(delegate)
     //...
     super.onCreate(savedInstanceState)
     //...
