@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-apply plugin: 'signing'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'org.jetbrains.dokka-android'
@@ -46,11 +45,6 @@ task javadocJar(type: Jar, dependsOn: dokka) {
 artifacts {
     archives javadocJar
     archives sourcesJar
-}
-
-signing {
-    required { gradle.taskGraph.hasTask("bintrayUpload") }
-    sign configurations.archives
 }
 
 install {

@@ -1,0 +1,68 @@
+package ru.ztrap.iconics.kt {
+
+  public final class ExtensionsKt {
+    ctor public ExtensionsKt();
+    method public static com.mikepenz.iconics.IconicsDrawable alpha(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> alphaProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable backgroundContourColor(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> backgroundContourColorProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable backgroundContourColorRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> backgroundContourColorResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable backgroundContourWidthDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> backgroundContourWidthDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable backgroundContourWidthPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> backgroundContourWidthPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable backgroundContourWidthRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> backgroundContourWidthResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable color(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> colorProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable colorFilter(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<? extends android.graphics.ColorFilter> colorFilterProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable colorListRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> colorListResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable colorRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> colorResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable colorStateList(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<? extends android.content.res.ColorStateList> colorListProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable contourColor(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> contourColorProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable contourColorRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> contourColorResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable contourWidthDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> contourWidthDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable contourWidthPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> contourWidthPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable contourWidthRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> contourWidthResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable[] createArray(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsArrayBuilder,? extends com.mikepenz.iconics.IconicsArrayBuilder> block);
+    method public static com.mikepenz.iconics.IconicsDrawable drawBackgroundContour(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Boolean> drawBackgroundContourProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable drawContour(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Boolean> drawContourProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable enableShadowSupport(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<? extends android.view.View> enableShadowSupportProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable icon(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<? extends com.mikepenz.iconics.typeface.IIcon> iconProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconFromChar(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Character> iconProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconFromString(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.String> iconProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconOffsetXDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> iconOffsetXDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconOffsetXPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> iconOffsetXPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconOffsetXRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> iconOffsetXResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconOffsetYDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> iconOffsetYDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconOffsetYPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> iconOffsetYPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconOffsetYRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> iconOffsetYResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable iconTextFromString(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.String> iconTextProducer);
+    method public static android.text.Spanned iconicsBuilder(android.content.Context, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.Iconics.IconicsBuilder,? extends com.mikepenz.iconics.Iconics.IconicsBuilderString> block);
+    method public static void iconicsBuilder(android.content.Context, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.Iconics.IconicsBuilder,? extends com.mikepenz.iconics.Iconics.IconicsBuilderView> block);
+    method public static void inflateWithIconics(android.view.MenuInflater, android.content.Context context, int menuId, android.view.Menu menu, boolean checkSubMenu = "false");
+    method public static com.mikepenz.iconics.IconicsDrawable paddingDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> paddingDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable paddingPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> paddingPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable paddingRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> paddingResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable respectFontBounds(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Boolean> respectFontBoundsProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRxDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersRxDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRxPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersRxPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRxRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersRxResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRyDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersRyDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRyPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersRyPxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable roundedCornersRyRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> roundedCornersRyResProducer);
+    method public static void setIconicsFactory(android.view.LayoutInflater, android.support.v7.app.AppCompatDelegate appCompatDelegate);
+    method public static com.mikepenz.iconics.IconicsDrawable sizeDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizeDpProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizeDpX(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizeDpXProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizeDpY(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizeDpYProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizePx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizePxProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizePxX(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizePxXProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizePxY(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizePxYProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizeRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizeResProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizeResX(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizeResXProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable sizeResY(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> sizeResYProducer);
+    method public static com.mikepenz.iconics.IconicsDrawable style(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<? extends android.graphics.Paint.Style> styleProducer);
+    method public static android.support.v4.graphics.drawable.IconCompat toAndroidIconCompat(com.mikepenz.iconics.IconicsDrawable);
+    method public static com.mikepenz.iconics.IconicsDrawable typeface(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<? extends android.graphics.Typeface> typefaceProducer);
+    method public static android.content.ContextWrapper wrapByIconics(android.content.Context);
+  }
+
+}
+
