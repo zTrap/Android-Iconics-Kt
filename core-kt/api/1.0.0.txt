@@ -1,0 +1,14 @@
+package ru.ztrap.iconics.kt {
+
+  public final class ExtensionsKt {
+    ctor public ExtensionsKt();
+    method public static com.mikepenz.iconics.IconicsDrawable[] createArray(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsArrayBuilder,? extends com.mikepenz.iconics.IconicsArrayBuilder> block);
+    method public static android.text.Spanned iconicsBuilder(android.content.Context, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.Iconics.IconicsBuilder,? extends com.mikepenz.iconics.Iconics.IconicsBuilderString> block);
+    method public static void iconicsBuilder(android.content.Context, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.Iconics.IconicsBuilder,? extends com.mikepenz.iconics.Iconics.IconicsBuilderView> block);
+    method public static void inflateWithIconics(android.view.MenuInflater, android.content.Context context, int menuId, android.view.Menu menu, boolean checkSubMenu = "false");
+    method public static void setIconicsFactory(android.view.LayoutInflater, android.support.v7.app.AppCompatDelegate appCompatDelegate);
+    method public static android.content.ContextWrapper wrapByIconics(android.content.Context);
+  }
+
+}
+

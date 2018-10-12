@@ -351,7 +351,7 @@ fun IconicsDrawable.contourColor(contourColorProducer: () -> Int): IconicsDrawab
 }
 // endregion
 
-// region roundedCornersRx 
+// region roundedCornersRx
 /**
  * @see IconicsDrawable.roundedCornersRxRes
  */
@@ -374,7 +374,7 @@ fun IconicsDrawable.roundedCornersRxPx(roundedCornersRxPxProducer: () -> Int): I
 }
 // endregion
 
-// region roundedCornersRy 
+// region roundedCornersRy
 /**
  * @see IconicsDrawable.roundedCornersRyRes
  */
@@ -397,7 +397,7 @@ fun IconicsDrawable.roundedCornersRyPx(roundedCornersRyPxProducer: () -> Int): I
 }
 // endregion
 
-// region roundedCorners 
+// region roundedCorners
 /**
  * @see IconicsDrawable.roundedCornersRes
  */
@@ -420,7 +420,7 @@ fun IconicsDrawable.roundedCornersPx(roundedCornersPxProducer: () -> Int): Iconi
 }
 // endregion
 
-// region contourWidth 
+// region contourWidth
 /**
  * @see IconicsDrawable.contourWidthRes
  */
@@ -443,7 +443,7 @@ fun IconicsDrawable.contourWidthPx(contourWidthPxProducer: () -> Int): IconicsDr
 }
 // endregion
 
-// region backgroundContourWidth 
+// region backgroundContourWidth
 /**
  * @see IconicsDrawable.backgroundContourWidthRes
  */

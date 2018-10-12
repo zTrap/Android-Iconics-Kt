@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-apply plugin: 'signing'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'org.jetbrains.dokka-android'
 
 group = GROUP
-version = rootProject.release.versionName
+version = android.defaultConfig.versionName
 
 dokka {
     outputFormat = 'javadoc'
@@ -46,11 +45,6 @@ task javadocJar(type: Jar, dependsOn: dokka) {
 artifacts {
     archives javadocJar
     archives sourcesJar
-}
-
-signing {
-    required { gradle.taskGraph.hasTask("bintrayUpload") }
-    sign configurations.archives
 }
 
 install {
@@ -102,7 +96,7 @@ bintray {
         vcsUrl = POM_VCS
 
         version {
-            name = rootProject.release.versionName
+            name = android.defaultConfig.versionName
 
             gpg {
                 sign = true
@@ -125,5 +119,5 @@ task cleanBuildInstall(type: GradleBuild) {
 
 task cleanBuildPublish(type: GradleBuild) {
     group = "publishing"
-    tasks = ['cleanBuildInstal', 'bintrayUpload']
+    tasks = ['cleanBuildInstall', 'bintrayUpload']
 }

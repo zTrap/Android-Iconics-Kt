@@ -1,3 +1,5 @@
+import com.android.build.gradle.api.BaseVariant
+
 /*
  * Copyright (c) 2018 zTrap
  *
@@ -18,18 +20,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion setup.compileSdkVersion
-    buildToolsVersion setup.buildTools
+    compileSdkVersion kt.setup.compileSdkVersion
+    buildToolsVersion kt.setup.buildTools
 
     defaultConfig {
-        minSdkVersion setup.minSdkVersion
-        targetSdkVersion setup.targetSdkVersion
-        versionCode release.versionCode
-        versionName release.versionName
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        minSdkVersion kt.setup.minSdkVersion
+        targetSdkVersion kt.setup.targetSdkVersion
+        versionCode kt.release.versionCode
+        versionName kt.release.versionName
     }
 
     lintOptions {
@@ -47,12 +45,13 @@ apply from: '../publishing.gradle'
 
 configurations {
     ktlint
+    metalava
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$deps.legacy.appcompat"
-    implementation "com.mikepenz:iconics-core:$deps.legacy.iconics"
+    implementation "com.android.support:appcompat-v7:$kt.deps.appcompat"
+    implementation "com.mikepenz:iconics-core:$kt.deps.iconics"
     testImplementation 'junit:junit:4.12'
 
     ktlint 'com.github.shyiko:ktlint:0.20.0'
@@ -65,3 +64,70 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 apply from: '../ktlint_options.gradle'
+
+apply from: '../metalava_deps.gradle'
+
+def variantClasspath(BaseVariant variant) {
+    return (android.bootClasspath + variant.compileConfiguration.incoming.artifactView { config ->
+        config.attributes { container ->
+            container.attribute(Attribute.of("artifactType", String.class), "jar")
+        }
+    }.artifacts.artifacts.collect { it.file }).join(File.pathSeparator)
+}
+
+android.libraryVariants.all { variant ->
+    // TODO eliminate variants https://issuetracker.google.com/issues/62201427
+    if (variant.buildType.isDebuggable()) {
+        return
+    }
+
+    task updateApi(type: JavaExec) {
+        group = "publishing"
+        inputs.dir('src/main/java')
+        outputs.file('api/current.txt')
+
+        classpath = configurations.metalava
+        main = 'com.android.tools.metalava.Driver'
+
+        doFirst {
+            args = [
+                    '--no-banner',
+                    '--source-path', 'src/main/java',
+                    '--compatible-output=no',
+                    '--omit-common-packages=yes',
+                    '--output-kotlin-nulls=yes',
+                    '--hide', 'HiddenSuperclass',
+                    '--hide', 'DeprecationMismatch',
+                    '--classpath', variantClasspath(variant),
+                    '--api', 'api/current.txt'
+            ]
+        }
+    }
+
+    task checkApi(type: JavaExec) {
+        group = "publishing"
+        inputs.file('api/current.txt')
+        inputs.dir('src/main/java')
+        outputs.file('api/current.txt')
+
+        classpath = configurations.metalava
+        main = 'com.android.tools.metalava.Driver'
+
+        doFirst {
+            args = [
+                    '--no-banner',
+                    '--source-path', 'src/main/java',
+                    '--compatible-output=no',
+                    '--omit-common-packages=yes',
+                    '--output-kotlin-nulls=yes',
+                    '--input-kotlin-nulls=yes',
+                    '--hide', 'HiddenSuperclass',
+                    '--hide', 'DeprecationMismatch',
+                    '--classpath', variantClasspath(variant),
+                    '--check-compatibility',
+                    '--previous-api', 'api/current.txt'
+            ]
+        }
+    }
+    check.dependsOn checkApi
+}

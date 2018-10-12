@@ -1,0 +1,19 @@
+// Signature format: 2.0
+package ru.ztrap.iconics.view.kt {
+
+  public final class ExtensionsKt {
+    ctor public ExtensionsKt();
+    method public static void bottomIcon(com.mikepenz.iconics.view.IconicsCheckableTextView, boolean checked, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void bottomIcon(com.mikepenz.iconics.view.IconicsTextView, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void endIcon(com.mikepenz.iconics.view.IconicsCheckableTextView, boolean checked, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void endIcon(com.mikepenz.iconics.view.IconicsTextView, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void icon(com.mikepenz.iconics.view.IconicsCompoundButton, boolean checked, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void icon(com.mikepenz.iconics.view.IconicsImageView, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void startIcon(com.mikepenz.iconics.view.IconicsCheckableTextView, boolean checked, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void startIcon(com.mikepenz.iconics.view.IconicsTextView, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void topIcon(com.mikepenz.iconics.view.IconicsCheckableTextView, boolean checked, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+    method public static void topIcon(com.mikepenz.iconics.view.IconicsTextView, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.IconicsDrawable,kotlin.Unit> block);
+  }
+
+}
+
