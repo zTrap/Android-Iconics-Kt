@@ -15,10 +15,12 @@
  */
 dependencies.add("metalava", files("../metalava.jar"))
 
-dependencies.add("metalava", "com.android.tools.external.org-jetbrains:uast:26.2.0-alpha15")
-dependencies.add("metalava", "com.android.tools.external.com-intellij:intellij-core:26.2.0-alpha15")
-dependencies.add("metalava", "com.android.tools.lint:lint-api:26.2.0-alpha15")
-dependencies.add("metalava", "com.android.tools.lint:lint-checks:26.2.0-alpha15")
-dependencies.add("metalava", "com.android.tools.lint:lint-gradle:26.2.0-alpha15")
-dependencies.add("metalava", "com.android.tools.lint:lint:26.2.0-alpha15")
-dependencies.add("metalava", "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.61")
+def lintVersion = "26.2.1"
+
+dependencies.add("metalava", "com.android.tools.external.org-jetbrains:uast:$lintVersion")
+dependencies.add("metalava", "com.android.tools.external.com-intellij:intellij-core:$lintVersion")
+dependencies.add("metalava", "com.android.tools.lint:lint-api:$lintVersion")
+dependencies.add("metalava", "com.android.tools.lint:lint-checks:$lintVersion")
+dependencies.add("metalava", "com.android.tools.lint:lint-gradle:$lintVersion")
+dependencies.add("metalava", "com.android.tools.lint:lint:$lintVersion")
+dependencies.add("metalava", "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${rootProject.ext.kotlin_version}")

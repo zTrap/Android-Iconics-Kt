@@ -1,3 +1,4 @@
+// Signature format: 2.0
 package ru.ztrap.iconics.kt {
 
   public final class ExtensionsKt {
@@ -31,7 +32,7 @@ package ru.ztrap.iconics.kt {
     method public static com.mikepenz.iconics.IconicsDrawable iconTextFromString(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.String> iconTextProducer);
     method public static android.text.Spanned iconicsBuilder(android.content.Context, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.Iconics.IconicsBuilder,? extends com.mikepenz.iconics.Iconics.IconicsBuilderString> block);
     method public static void iconicsBuilder(android.content.Context, kotlin.jvm.functions.Function1<? super com.mikepenz.iconics.Iconics.IconicsBuilder,? extends com.mikepenz.iconics.Iconics.IconicsBuilderView> block);
-    method public static void inflateWithIconics(android.view.MenuInflater, android.content.Context context, int menuId, android.view.Menu menu, boolean checkSubMenu = "false");
+    method public static void inflateWithIconics(android.view.MenuInflater, android.content.Context context, int menuId, android.view.Menu menu, boolean checkSubMenu = false);
     method public static com.mikepenz.iconics.IconicsDrawable paddingDp(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> paddingDpProducer);
     method public static com.mikepenz.iconics.IconicsDrawable paddingPx(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> paddingPxProducer);
     method public static com.mikepenz.iconics.IconicsDrawable paddingRes(com.mikepenz.iconics.IconicsDrawable, kotlin.jvm.functions.Function0<java.lang.Integer> paddingResProducer);

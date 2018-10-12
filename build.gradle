@@ -15,13 +15,13 @@
  */
 
 buildscript {
-    ext.kotlin_version = '1.2.61'
+    ext.kotlin_version = '1.2.71'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0-alpha08'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
@@ -32,26 +32,39 @@ buildscript {
 }
 
 ext {
-    release = [
-            versionName: "1.0.3-SNAPSHOT",
-            versionCode: 1030
-    ]
-
-    setup = [
-            buildTools       : "28.0.2",
-            targetSdkVersion : 28,
-            compileSdkVersion: 28,
-            minSdkVersion    : 14
-    ]
-
-    deps = [
-            legacy  : [
-                    appcompat: '27.1.1',
-                    iconics  : '3.0.4@aar'
+    kt = [
+            release: [
+                    versionName: "1.0.3",
+                    versionCode: 1030
             ],
-            androidX: [
-                    appcompat: '1.0.0-rc02',
-                    iconics  : '3.1.0-rc01'
+            setup  : [
+                    buildTools       : "28.0.3",
+                    targetSdkVersion : 28,
+                    compileSdkVersion: 28,
+                    minSdkVersion    : 14
+
+            ],
+            deps   : [
+                    appcompat: '28.0.0',
+                    iconics  : '3.0.4@aar'
+            ]
+    ]
+
+    ktx = [
+            release: [
+                    versionName: "1.0.3",
+                    versionCode: 1030
+            ],
+            setup  : [
+                    buildTools       : "28.0.3",
+                    targetSdkVersion : 28,
+                    compileSdkVersion: 28,
+                    minSdkVersion    : 14
+
+            ],
+            deps   : [
+                    appcompat: '1.0.0',
+                    iconics  : '3.1.0'
             ]
     ]
 }
