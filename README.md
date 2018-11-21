@@ -21,12 +21,12 @@ Install
 
 ```groove
 // pure Appcompat
-implementation 'ru.ztrap.iconics:core-kt:<current version>'
-implementation 'ru.ztrap.iconics:views-kt:<current version>'
+implementation 'ru.ztrap.iconics:core-kt:1.0.3'
+implementation 'ru.ztrap.iconics:views-kt:1.0.3'
 
 // with AndroidX
-implementation 'ru.ztrap.iconics:core-ktx:<current version>'
-implementation 'ru.ztrap.iconics:views-ktx:<current version>'
+implementation 'ru.ztrap.iconics:core-ktx:1.0.3'
+implementation 'ru.ztrap.iconics:views-ktx:1.0.3'
 ```
 
 Usage
